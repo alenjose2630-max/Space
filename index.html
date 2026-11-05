@@ -1,103 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineVerse | Stream Beyond</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamPulse — Watch Unlimited Shows & Movies</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
-    <!-- Navigation Bar -->
+  <!-- Navigation Bar -->
+  <header class="header-nav">
     <nav class="navbar">
-        <div class="logo">Cine<span>Verse</span></div>
+      <div class="nav-brand">
+        <span class="brand-icon">▶</span>
+        <span class="brand-name">StreamPulse</span>
+      </div>
 
+      <ul class="nav-links">
+        <li><a href="#" class="nav-item active">Home</a></li>
+        <li><a href="#" class="nav-item">Series</a></li>
+        <li><a href="#" class="nav-item">Movies</a></li>
+        <li><a href="#" class="nav-item">New & Popular</a></li>
+        <li><a href="#" class="nav-item">My List</a></li>
+      </ul>
 
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#shows">Explore Shows</a>
-            <a href="#">Sign In</a>
-        </div>
+      <!-- Flexbox Search Bar (New Section Option 1) -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search title, genre, cast..." class="search-input" />
+        <button type="button" class="search-button">Search</button>
+      </div>
+
+      <div class="user-profile">
+        <div class="avatar">SP</div>
+      </div>
     </nav>
+  </header>
 
+  <!-- Flexbox Main Sections Layout -->
+  <main class="main-content">
 
     <!-- Featured Banner -->
-    <section class="banner">
-        <div class="banner-content">
-            <p class="tagline">CINEVERSE ORIGINAL</p>
-            <h1 class="title">Beyond the Stars</h1>
-            <p class="description">
-                A journey beyond the unknown. Discover a world
-                where adventure, suspense,mystery, and imagination collide.
-            </p>
-            <button class="play-button">▶ Play Now</button>
+    <section class="hero-banner">
+      <div class="banner-overlay"></div>
+      <div class="banner-content">
+        <span class="trending-badge">#1 IN TRENDING TODAY</span>
+        <h1 class="banner-title">CYBERPULSE 2099</h1>
+        <p class="banner-description">
+          In a neon-drenched metropolis, a rogue hacker uncovers a dark corporate conspiracy that threatens to rewire human consciousness forever.
+        </p>
+        <div class="banner-actions">
+          <button class="btn btn-primary">▶ Play Now</button>
+          <button class="btn btn-secondary">ℹ More Info</button>
         </div>
+      </div>
     </section>
 
+    <!-- Genre Filter Row (New Section Option 2 - Attribute Selector Used) -->
+    <section class="filter-section">
+      <h3 class="section-label">Filter by Genre</h3>
+      <div class="genre-row">
+        <button class="genre-pill" data-active="true">All Content</button>
+        <button class="genre-pill" data-active="false">Sci-Fi & Cyberpunk</button>
+        <button class="genre-pill" data-active="false">Action Thrillers</button>
+        <button class="genre-pill" data-active="false">Anime</button>
+        <button class="genre-pill" data-active="false">Docuseries</button>
+        <button class="genre-pill" data-active="false">Mystery</button>
+        <button class="genre-pill" data-active="false">Comedies</button>
+      </div>
+    </section>
 
-    <!-- Shows Section -->
-    <main class="shows-section" id="shows">
+    <!-- Part 1 Show Card Flex Row (At Least 4 Cards with Hover Effect) -->
+    <section class="row-section">
+      <h2 class="section-title">Trending Now</h2>
+      <div class="card-row">
+        
+        <article class="show-card">
+          <div class="card-media">
+            <img src="https://picsum.photos/seed/cyber1/340/500" alt="Neon Horizon" class="card-image">
+            <span class="card-badge">NEW</span>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title">Neon Horizon</h3>
+            <p class="card-meta">2026 • Sci-Fi • 2 Seasons</p>
+          </div>
+        </article>
 
+        <article class="show-card">
+          <div class="card-media">
+            <img src="https://picsum.photos/seed/cyber2/340/500" alt="Shadow Protocol" class="card-image">
+            <span class="card-badge">HD</span>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title">Shadow Protocol</h3>
+            <p class="card-meta">2025 • Thriller • 3 Seasons</p>
+          </div>
+        </article>
 
-        <h2>Trending This Week</h2>
+        <article class="show-card">
+          <div class="card-media">
+            <img src="https://picsum.photos/seed/cyber3/340/500" alt="Starlight Odyssey" class="card-image">
+            <span class="card-badge">4K</span>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title">Starlight Odyssey</h3>
+            <p class="card-meta">2026 • Space • 1 Season</p>
+          </div>
+        </article>
 
+        <article class="show-card">
+          <div class="card-media">
+            <img src="https://picsum.photos/seed/cyber4/340/500" alt="The Last Sanctuary" class="card-image">
+            <span class="card-badge">TOP 10</span>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title">The Last Sanctuary</h3>
+            <p class="card-meta">2024 • Drama • 4 Seasons</p>
+          </div>
+        </article>
 
-        <div class="card-container">
+      </div>
+    </section>
 
-
-            <div class="card" data-new="true">
-                <span class="new-badge">NEW</span>
-                <div class="poster poster-one"></div>
-                <h3>Midnight City</h3>
-                <p>Drama · 2026</p>
+    <!-- Continue Watching Row (New Section Option 3 - Flex Row with Progress Bars) -->
+    <section class="row-section">
+      <h2 class="section-title">Continue Watching</h2>
+      <div class="continue-row">
+        
+        <article class="continue-card">
+          <div class="continue-media">
+            <img src="https://picsum.photos/seed/cw1/480/270" alt="Neon Horizon Preview" class="continue-image">
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 75%;"></div>
             </div>
+          </div>
+          <div class="continue-details">
+            <h4 class="continue-title">Neon Horizon</h4>
+            <span class="continue-ep">S2:E4 "Signal Loss" • 14m left</span>
+          </div>
+        </article>
 
-
-            <div class="card">
-                <div class="poster poster-two"></div>
-                <h3>Lost Kingdom</h3>
-                <p>Adventure · 2025</p>
+        <article class="continue-card">
+          <div class="continue-media">
+            <img src="https://picsum.photos/seed/cw2/480/270" alt="Starlight Odyssey Preview" class="continue-image">
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 40%;"></div>
             </div>
+          </div>
+          <div class="continue-details">
+            <h4 class="continue-title">Starlight Odyssey</h4>
+            <span class="continue-ep">S1:E2 "Deep Void" • 32m left</span>
+          </div>
+        </article>
 
-
-            <div class="card" data-new="true">
-                <span class="new-badge">NEW</span>
-                <div class="poster poster-three"></div>
-                <h3>Silent Echo</h3>
-                <p>Thriller · 2026</p>
+        <article class="continue-card">
+          <div class="continue-media">
+            <img src="https://picsum.photos/seed/cw3/480/270" alt="Shadow Protocol Preview" class="continue-image">
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 90%;"></div>
             </div>
+          </div>
+          <div class="continue-details">
+            <h4 class="continue-title">Shadow Protocol</h4>
+            <span class="continue-ep">S3:E8 "Zero Hour" • 5m left</span>
+          </div>
+        </article>
 
+      </div>
+    </section>
 
-            <div class="card">
-                <div class="poster poster-four"></div>
-                <h3>Ocean Dreams</h3>
-                <p>Fantasy · 2025</p>
-            </div>
+  </main>
 
-
-            <div class="card">
-                <div class="poster poster-five"></div>
-                <h3>Dark Horizon</h3>
-                <p>Sci-Fi · 2025</p>
-            </div>
-
-
-            <div class="card">
-                <div class="poster poster-six"></div>
-                <h3>Golden Hour</h3>
-                <p>Romance · 2026</p>
-            </div>
-
-
-        </div>
-    </main>
-
-
-    <footer>
-        <p>© 2026 CineVerse. All rights reserved.</p>
-    </footer>
-
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2026 StreamPulse Inc. Built for Web Interface Part 2 Project.</p>
+  </footer>
 
 </body>
 </html>
